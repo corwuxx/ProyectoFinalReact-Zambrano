@@ -1,0 +1,124 @@
+.item-count {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+  background: #fafafa;
+  max-width: 300px;
+}
+
+.counter-container h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.counter-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #007bff;
+  background: white;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.counter-btn:hover:not(:disabled) {
+  background: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+.counter-btn:disabled {
+  border-color: #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.counter-btn.plus {
+  color: #007bff;
+}
+
+.counter-btn.minus {
+  color: #007bff;
+}
+
+.quantity {
+  font-size: 24px;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+  padding: 8px 12px;
+  background: white;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  color: #333; /* ← Añadido para asegurar color visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 15px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.add-to-cart-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.stock-info {
+  text-align: center;
+}
+
+.available {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.out-of-stock {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* Efectos adicionales */
+.counter-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.add-to-cart-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
