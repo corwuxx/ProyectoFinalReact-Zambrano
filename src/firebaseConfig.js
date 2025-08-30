@@ -15,5 +15,4 @@ const firebaseConfig = {
 // Initialize Firebase
 const miAppBackend = initializeApp(firebaseConfig);
 
-// ACA QUEDA REFERENCIADO EL BACKEND MIO
 export const db = getFirestore(miAppBackend);

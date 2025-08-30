@@ -21,7 +21,7 @@ export const ItemListContainer = () => {
       consulta = filtrado;
     }
     
-    //todos o a veces una parte
+
     let getProducts = getDocs(consulta);
     
     getProducts

@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { Link } from "react-router-dom"; // Cambié a react-router-dom
+import { Link } from "react-router-dom"; 
 import { CartContext } from "../../../context/CartContext";
-import './cartWidget.css'; // Mantengo tu archivo CSS
+import './cartWidget.css'; 
 
 export const CartWidget = () => {
   const { getTotalQuanty } = useContext(CartContext);

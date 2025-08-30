@@ -67,7 +67,7 @@
   background: white;
   border: 2px solid #e1e1e1;
   border-radius: 8px;
-  color: #333; /* ← Añadido para asegurar color visible */
+  color: #333; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +114,6 @@
   font-weight: 500;
 }
 
-/* Efectos adicionales */
 .counter-btn:active:not(:disabled) {
   transform: scale(0.95);
 }
