@@ -13,7 +13,7 @@ const ItemCount = ({ product }) => {
     if (contador < availableStock) {
       setContador(contador + 1);
     } else {
-      alert("Stock máximo disponible alcanzado");
+      toast.info("Stock máximo disponible alcanzado");
     }
   };
 
@@ -31,7 +31,7 @@ const ItemCount = ({ product }) => {
       };
       addToCart(productoConCantidad);
     } else {
-      alert(`❌ No puedes agregar ${contador} unidades. Solo hay ${availableStock} disponibles.`);
+      toast.error(`❌ No puedes agregar ${contador} unidades. Solo hay ${availableStock} disponibles.`);
     }
   };
 

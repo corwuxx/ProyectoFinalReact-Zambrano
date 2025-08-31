@@ -32,7 +32,7 @@ export const ItemListContainer = () => {
         setProducts(arrayBien);
       })
       .catch((error) => {
-        console.error('Error loading products:', error);
+        toast.error('Error loading products:', error);
       })
       .finally(() => {
         setLoading(false);

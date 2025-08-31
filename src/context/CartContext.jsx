@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = createContext();
 
@@ -17,17 +19,17 @@ const CartContextProvider = ({ children }) => {
       if (newQuantity <= newCart[existingItemIndex].stock) {
         newCart[existingItemIndex].cantidad = newQuantity;
         setCart(newCart);
-        alert("✅ Cantidad actualizada en el carrito");
+        toast.success("✅ Cantidad actualizada en el carrito");
       } else {
-        alert(`❌ No hay suficiente stock. Máximo disponible: ${newCart[existingItemIndex].stock}`);
+        toast.error(`❌ No hay suficiente stock. Máximo disponible: ${newCart[existingItemIndex].stock}`);
       }
     } else {
       // Si el producto no existe en el carrito
       if (producto.cantidad <= producto.stock) {
         setCart([...cart, producto]);
-        alert("✅ Producto agregado al carrito");
+        toast.success("✅ Producto agregado al carrito");
       } else {
-        alert(`❌ No hay suficiente stock. Máximo disponible: ${producto.stock}`);
+        toast.error(`❌ No hay suficiente stock. Máximo disponible: ${producto.stock}`);
       }
     }
   };

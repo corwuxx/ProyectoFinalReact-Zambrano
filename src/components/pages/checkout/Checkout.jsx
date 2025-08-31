@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { db } from "../../../firebaseConfig"
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore"
 import './Checkout.css'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Checkout = () => {
   const [user, setUser] = useState({
@@ -39,7 +41,7 @@ export const Checkout = () => {
         })
       })
       .catch((error) => {
-        alert("Ocurrió un error al procesar la compra")
+        toast.error("Ocurrió un error al procesar la compra");
         console.log(error)
       })
   }
@@ -49,16 +51,17 @@ export const Checkout = () => {
   }
 
   if (orderId) {
-    return (
-      <div className="checkout-success">
-        <h2>¡Compra exitosa!</h2>
-        <p>Tu número de orden es: {orderId}</p>
-        <Link to="/" className="continue-shopping">
-          Volver a la tienda
-        </Link>
-      </div>
-    )
-  }
+  return (
+    <div className="checkout-success">
+      <h2>¡Compra exitosa!</h2>
+      <p>Tu número de orden es:</p>
+      <div className="order-number">{orderId}</div>
+      <Link to="/" className="continue-shopping">
+        Volver a la tienda
+      </Link>
+    </div>
+  )
+}
 
   if (cart.length === 0) {
     return (

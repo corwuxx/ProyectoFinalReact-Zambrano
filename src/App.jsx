@@ -7,6 +7,7 @@ import { ItemDetailContainer } from './components/pages/itemDetailContainer/Item
 import { Cart } from './components/pages/cart/Cart'
 import { Checkout } from './components/pages/checkout/Checkout'
 import { NotFound } from './components/pages/notFound/NotFound'
+import { ToastContainer } from 'react-toastify';
 import './App.css'
 
 function App() {
@@ -25,6 +26,17 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </BrowserRouter>
     </CartContextProvider>
   )
